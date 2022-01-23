@@ -17,23 +17,23 @@ module.exports = function (api, options) {
       // Parse the name out of rich text blocks.
       const databaseName = databases[0].title.map((t) => t.text.content).join(' ')
 
-      databaseCollection.addNode({
+      const dbNode = databaseCollection.addNode({
         ...database,
         name: databaseName
       })
 
       const pages = await getPagesFromDatabase(notion, database.id)
       for (const page of pages) {
-        pageCollection.addNode({
+        const pageNode = pageCollection.addNode({
           ...page,
-          database: actions.store.createReference(database)
+          database: actions.store.createReference(dbNode)
         })
 
         const blocks = await getBlocks(notion, page.id)
         for (const block of blocks) {
           blockCollection.addNode({
             ...block,
-            page: actions.store.createReference(page)
+            page: actions.store.createReference(pageNode)
           })
         }
       }

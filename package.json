@@ -1,6 +1,6 @@
 {
-  "name": "gridsome-source-notion",
-  "version": "0.1.0",
+  "name": "gridsome-notion-source",
+  "version": "1.0.0",
   "description": "Consume Notion APIs in your Gridsome pages.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sevensidedmarble/gridsome-source-notion.git"
+    "url": "git+https://github.com/sevensidedmarble/gridsome-notion-source.git"
   },
   "keywords": [
     "gridsome",
@@ -17,9 +17,9 @@
   "author": "sevensidedmarble",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sevensidedmarble/gridsome-source-notion/issues"
+    "url": "https://github.com/sevensidedmarble/gridsome-notion-source/issues"
   },
-  "homepage": "https://github.com/sevensidedmarble/gridsome-source-notion#readme",
+  "homepage": "https://github.com/sevensidedmarble/gridsome-notion-source#readme",
   "dependencies": {
     "@notionhq/client": "^0.3.1"
   },
